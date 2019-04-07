@@ -1,37 +1,119 @@
-/*
-        
-        body > div
-        {
-            
-            margin:121px 149px;
-            
-            width:483px;
-            height:298px;
-            
-            background:#676470;
-            color:#fff;
-            
-            font-family:Lato;
-            font-weight:900;
-            font-size:3.4em;
-            
-            text-align:center;
-            line-height:298px;
-            
-            transition:all 0.3s;
-            
-        }
-        
-        .fade
-        {
-            opacity:0.5;
-        }
-        .fade:hover
-        {
-            opacity:1;
-        }*/
 
 .website-heart:after {
   content: "\2764";
   color: #f45660; }
 
+
+/* .primary-underline{
+    position: relative;
+    display: inline-block;
+    z-index:0;
+  }
+.primary-underline:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: -0px;
+    height: 0;
+    border: 2px solid #4894f0;
+    border-radius : 10px;
+    text-decoration: none;
+    transform: rotate(-2deg);
+    /* will-change: width; */
+  } */
+
+
+a {
+  color: inherit;
+}
+
+
+/* .link::before{
+	transition: width .1s ease-out;
+} */
+
+/* .link:hover::before{
+	transition-duration: .15s;
+} */
+
+/*
+P.S: if you like my content maybe you will become a donator and donate some money? That helps me to create new awesome materials. https://www.paypal.me/melnik909
+*/
+
+/*
+* These styles for text decoration. The demo will be work without it
+*/
+
+.link{
+	color: #000000;
+	/* font-size: 16px; */
+	/* font-weight: 700; */
+
+	text-decoration: none;
+	/* text-transform: uppercase; */
+}
+
+/*
+* These styles creates the underlining of link
+*/
+
+@keyframes shake {
+    0% { transform: rotate(-2deg); }
+   80% { transform: rotate(-2deg); }
+   85% { transform: rotate(5deg); }
+   95% { transform: rotate(-2deg); }
+  100% { transform: rotate(-2deg); }
+}
+
+
+.link{
+	position: relative;
+	z-index: 1;
+	display: inline-flex;
+
+	/* padding-left: 10px;
+	padding-bottom: 5px;
+	padding-right: 10px; */
+}
+
+.link::before{
+  animation: wiggle 2.5s infinite;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to top, #fed330 25%, rgba(0, 0, 0, 0) 40%);
+
+	position: absolute;
+	left: 0;
+	bottom: -3px;
+	z-index: -1;
+
+	will-change: width;
+	transform: rotate(-2deg);
+	transform-origin: left bottom;
+  display: inline-block;
+  /* animation: shake 10s infinite; */
+}
+
+.link:hover::before{
+	width: 0;
+}
+
+/*
+* animation styles
+*/
+
+.link::before{
+	transition: width .1s ease-out;
+}
+
+.link:hover::before{
+	transition-duration: .15s;
+}
+
+
+.style-8 {
+  background-image: linear-gradient(315deg, $yellow 50%, $gray-lighter 50%);
+}
