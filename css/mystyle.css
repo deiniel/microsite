@@ -1,7 +1,3 @@
-.website-heart:after {
-  content: "\2764";
-  color: #f45660; }
-
 .Site {
   display: flex;
   min-height: 100vh;
